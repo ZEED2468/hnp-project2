@@ -12,12 +12,9 @@ const sequelize = new Sequelize(
     dialetModule:pg,
     port: config.port, 
     dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false, 
-      },
+      ssl: false
     },
-    logging: console.log, 
+    logging: false, 
   }
 );
 

@@ -9,10 +9,7 @@ module.exports = {
     dialect: "postgres",
     port: process.env.DB_PORT,
     dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      },
+      ssl: false
     },
   },
   production: {
@@ -23,10 +20,7 @@ module.exports = {
     dialect: "postgres",
     port: process.env.DB_PORT,
     dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
+      ssl: false,
       },
     },
-  },
 };

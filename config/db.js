@@ -1,3 +1,5 @@
+const ssl = process.env.NODE_ENV === 'production';
+
 const dotenv = require("dotenv");
 dotenv.config();
 module.exports = {
@@ -9,7 +11,7 @@ module.exports = {
     dialect: "postgres",
     port: process.env.DB_PORT,
     dialectOptions: {
-      ssl: false
+      ssl: ssl ? { require: true, rejectUnauthorized: false } : false,
     },
   },
   production: {
@@ -20,7 +22,7 @@ module.exports = {
     dialect: "postgres",
     port: process.env.DB_PORT,
     dialectOptions: {
-      ssl: false,
+      ssl: ssl ? { require: true, rejectUnauthorized: false } : false,
       },
     },
 };

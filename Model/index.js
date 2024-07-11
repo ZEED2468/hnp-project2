@@ -1,6 +1,7 @@
 const Sequelize = require("sequelize");
 const config = require("../config/db").development;
 const pg = require("pg")
+const ssl = process.env.NODE_ENV === 'production';
 
 const sequelize = new Sequelize(
   config.database,
@@ -12,7 +13,7 @@ const sequelize = new Sequelize(
     dialetModule:pg,
     port: config.port, 
     dialectOptions: {
-      ssl: false
+      ssl: ssl ? { require: true, rejectUnauthorized: false } : false,
     },
     logging: false, 
   }

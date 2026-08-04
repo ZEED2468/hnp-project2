@@ -1,14 +1,10 @@
-# HNP Project 2
+# HNG Project
 
 A Node.js backend application built with a modular architecture, separating application logic into controllers, routes, models, middleware, configuration, and tests.
 
-## Live Demo
-
-https://hnp-project2.vercel.app
-
 ## Overview
 
-HNP Project 2 is a backend web application designed with a structured and maintainable server-side architecture.
+HNG Project 2 is a backend web application designed with a structured and maintainable server-side architecture.
 
 The project separates different responsibilities across dedicated directories, making the codebase easier to understand, test, maintain, and extend.
 
